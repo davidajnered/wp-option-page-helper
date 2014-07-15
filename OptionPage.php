@@ -39,7 +39,7 @@ class OptionPage
             ),
         );
 
-        $this->optionPageHelper = new SettingsHelper($options);
+        $this->optionPageHelper = new OptionPageHelper($options);
     }
 
     /**
@@ -73,20 +73,20 @@ class OptionPage
      */
     public function firstOptionFieldCallback()
     {
-        // $option = get_option('my-settings_first_option');
+        // Get saved field values
+        $option = get_option('my-settings_first_option');
 
-        // Build the element here and echo the output
+        // Build element and print
+        echo '<input name="my-settings_first_option" value="' . $option . '">';
     }
 
     public function secondOptionFieldCallback()
     {
-        // Build the element here and echo the output
+        // Build element and print
     }
 
     public function uncountableOptionFieldCallback()
     {
-        // $option = get_option('my-settings_first_option');
-
-        // Build the element here and echo the output
+        // Build element and print
     }
 }
