@@ -1,7 +1,15 @@
 <?php
-/**
- * Written by David Ajnered
- */
+/*
+Plugin Name: Option Page Helper
+Version: 0.1
+Plugin URI:
+Description: Developer tool that wraps all necessary function calls to create a option page.
+Author: David Ajnered
+Author URI: http://davidajnered.com
+License: GPL v3
+*/
+namespace OptionPageHelper;
+
 class OptionPageHelper
 {
     /**

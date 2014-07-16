@@ -1,9 +1,4 @@
 <?php
-/**
- * Helpers.
- */
-namespace OptionPageHelper;
-
 class Utils
 {
     /**

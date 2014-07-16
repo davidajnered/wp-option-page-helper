@@ -1,7 +1,9 @@
 <?php
 /**
- * Written by David Ajnered
+ * Example of implementation in plugin class or similar.
  */
+namespace OptionPageHelper;
+
 class OptionPage
 {
     /**

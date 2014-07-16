@@ -1,8 +1,22 @@
-# Wordpress Option Page Helper
+=== Option Page Helper ===
+Contributors: davidajnered
+Donate link: http://davidajnered.com
+License: GPLv3
+License URI: http://www.gnu.org/licenses/gpl.html
+Tags: option page, admin page, settings page, option, admin, settings, developer, development, class, object, object oriented programming, dev, code, framework
+Requires at least: 3.9
+Tested up to: 3.9
+Stable tag: 0.1
 
+== Description ==
+Option Page Helper is a developer tool that wraps all necessary function calls to create a option page. It stores variables and auto-generate callbacks to minimize the development time.
+
+[More on github](https://github.com/davidajnered/wp-option-page-helper)
+
+== Installation ==
 I thought I was a bit complicated to add option pages so I wrote a helper that simplify thing a bit. The helper stores recurring variables like page slug so you don't have to pass it with all function calls. It created callback automatically based on the section or field name, so you don't have to care about that eigher. This is a simple example on how to create a options page
 
-```
+`
 $options = array(
     'page_title' => 'Settings Admin',                   // Page title
     'menu_title' => 'My Settings',                      // Menu title
@@ -20,11 +34,11 @@ $options = array(
 );
 
 $this->optionPageHelper = new OptionPageHelper($options);
-```
+`
 
 You're page is created, but there are some callbacks to take care of.
 
-```
+`
 /**
  * Options page callback.
  *
@@ -43,10 +57,10 @@ public function page()
 
     echo $output;
 }
-```
+`
 
 And then we have the field(s) callback...
-```
+`
 /**
  * Callback for an option field.
  *
@@ -65,7 +79,19 @@ public function firstOptionFieldCallback()
     // Build element and print
     echo '<input name="my-settings_first_option" value="' . $option . '">';
 }
-```
+`
 Don't forget to read the code comments here, they're useful :)
 
 The Utils class contains some formatting helpers, so you need that file to. The OptionPage class is just an example on how to implement this, just like this readme.
+
+== Frequently Asked Questions ==
+Nope
+
+== Changelog ==
+* 0.1 first version
+
+== Upgrade Notice ==
+Nothung
+
+== Screenshots ==
+It's just a class...
